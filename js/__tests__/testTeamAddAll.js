@@ -7,7 +7,6 @@ test('Не добавляет одного и того же персонажа �
   const character = new Character('Лучник');
 
   team.add(character);
-  console.log(team.members);
 
   expect(() => {
     team.add(character);
@@ -22,8 +21,6 @@ test('Добавляет нового персонажа в команду', () 
   team.add(character);
   team.add(character1);
 
-
-  console.log(team);
   expect(team.members.size).toBe(2);
 })
 
@@ -35,7 +32,6 @@ test('Добавляет всех персонажей в команду', () =>
 
   team.addAll(character, character1, character2);
 
-  console.log(team.members);
   expect(team.members.size).toBe(3);
 })
 
@@ -49,7 +45,6 @@ test('Преобразование Set в массив', () => {
   team.add(character1);
 
 
-  console.log(team);
   team.toArray();
 
   expect(Array.isArray(team.members)).toBe(true);
